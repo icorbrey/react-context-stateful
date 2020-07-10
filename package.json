@@ -6,7 +6,7 @@
 	"name": "react-context-stateful",
 	"author": "Isaac Corbrey <icorbrey@gmail.com>",
 	"repository": {
-		"url": "https://github.com/icorbrey/react-context-stateful"
+		"url": "git://github.com/icorbrey/react-context-stateful.git"
 	},
 	"description": "A simple wrapper that makes it easy to create simple, stateful contexts.",
 	"scripts": {
