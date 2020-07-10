@@ -15,7 +15,7 @@ yarn add react-context-stateful
 ## Usage
 
 To create a stateful context, pass `createStatefulContext()` a functional
-component and export its results as shown: 
+component and export its results: 
 
 ```js
 // TodoContext.jsx
@@ -77,7 +77,7 @@ const TodoAdder = () =>
 	// ...
 }
 
-export default 
+export default TodoAdder
 ```
 
 This package also includes support for defining your contexts with TypeScript:
