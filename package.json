@@ -5,9 +5,15 @@
 	"types": "dist/createStatefulContext.d.ts",
 	"name": "react-context-stateful",
 	"author": "Isaac Corbrey <icorbrey@gmail.com>",
+	"repository": {
+		"url": "https://github.com/icorbrey/react-context-stateful"
+	},
 	"description": "A simple wrapper that makes it easy to create simple, stateful contexts.",
 	"scripts": {
 		"prepublish": "tsc"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
 	},
 	"dependencies": {
 		"@types/react": "^16.9.42",
