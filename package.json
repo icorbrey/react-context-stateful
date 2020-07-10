@@ -13,7 +13,7 @@
 		"prepublish": "tsc"
 	},
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
+		"registry": "https://registry.npmjs.org/"
 	},
 	"dependencies": {
 		"@types/react": "^16.9.42",
