@@ -1,7 +1,7 @@
 {
 	"license": "MIT",
 	"version": "1.0.0",
-	"main": "dist/createStatefulContext.ts",
+	"main": "dist/createStatefulContext.js",
 	"types": "dist/createStatefulContext.d.ts",
 	"name": "react-context-stateful",
 	"author": "Isaac Corbrey <icorbrey@gmail.com>",
@@ -10,7 +10,7 @@
 	},
 	"description": "A simple wrapper that makes it easy to create simple, stateful contexts.",
 	"scripts": {
-		"prepublish": "tsc"
+		"prepare": "tsc"
 	},
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/"
