@@ -40,12 +40,12 @@ export [
 	}
 
 	return (
-		<Context value={ {
+		<Context.Provider value={ {
 			addTodoItem,
 			popTodoItem
 		} }>
 			{ children }
-		</Context>
+		</Context.Provider>
 	)
 })
 ```
@@ -108,12 +108,12 @@ export [
 	}
 
 	return (
-		<Context value={ {
+		<Context.Provider value={ {
 			addTodoItem,
 			popTodoItem
 		} }>
 			{ children }
-		</Context>
+		</Context.Provider>
 	)
 })
 ```
