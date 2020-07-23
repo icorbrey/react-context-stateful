@@ -18,5 +18,14 @@
 	"dependencies": {
 		"@types/react": "^16.9.42",
 		"react": "^16.13.1"
-	}
+	},
+	"keywords": [
+		"react",
+		"reactjs",
+		"context",
+		"state",
+		"stateful",
+		"typescript",
+		"javascript"
+	]
 }
