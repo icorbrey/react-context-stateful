@@ -1,6 +1,6 @@
 {
 	"license": "MIT",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"main": "dist/createStatefulContext.js",
 	"types": "dist/createStatefulContext.d.ts",
 	"name": "react-context-stateful",
