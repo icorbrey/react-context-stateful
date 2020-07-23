@@ -10,7 +10,7 @@
 	},
 	"description": "A simple wrapper that makes it easy to create simple, stateful contexts.",
 	"scripts": {
-		"prepare": "tsc"
+		"prepublishOnly": "tsc"
 	},
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/"
