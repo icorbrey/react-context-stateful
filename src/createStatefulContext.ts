@@ -1,27 +1,23 @@
-import
-{
-	ReactNode,
-	ReactElement,
-	Context as ReactContext,
-	createContext as createReactContext
-} from 'react'
+import React from 'react'
 
 type ContextProviderProps = {
-	children?: ReactNode
+	children?: React.ReactNode
 }
 
 type ContextPair<T> = [
-	ReactContext<T>,
-	({ children }: ContextProviderProps) => ReactElement
+	() => T,
+	({ children }: ContextProviderProps) => React.ReactElement
 ]
 
-type ContextProviderCreator<T> = (Context: ReactContext<T>) =>
+type ContextProviderCreator<T> = (Provider: React.Provider<T>) =>
 	({ children }: ContextProviderProps) =>
-		ReactElement
+		React.ReactElement
 
 export default <T>(creator: ContextProviderCreator<T>): ContextPair<T> =>
 {
-	const context = createReactContext<T>({} as T)
-	const provider = creator(context)
-	return [context, provider]
+	const context = React.createContext<T>({} as T)
+	const provider = creator(context.Provider)
+
+	const useContext = () => React.useContext(context)
+	return [useContext, provider]
 }
