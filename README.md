@@ -23,9 +23,9 @@ component and export its results:
 import createStatefulContext from 'react-context-stateful'
 
 export [
-	TodoContext,
-	TodoContextProvider
-] = createStatefulContext(Context => ({ children }) =>
+	useTodo,
+	TodoProvider
+] = createStatefulContext(Provider => ({ children }) =>
 {
 	const [todoList, setTodoList] = useState([])
 
@@ -40,12 +40,12 @@ export [
 	}
 
 	return (
-		<Context.Provider value={ {
+		<Provider value={ {
 			addTodoItem,
 			popTodoItem
 		} }>
 			{ children }
-		</Context.Provider>
+		</Provider>
 	)
 })
 ```
@@ -55,12 +55,12 @@ The `Provider` component can then be used at the project root:
 ```js
 // index.js
 
-import { TodoContextProvider } from './TodoContext'
+import { TodoProvider } from './TodoContext'
 
 ReactDOM.render(
-	<TodoContextProvider>
+	<TodoProvider>
 		<App />
-	</TodoContextProvider>,
+	</TodoProvider>,
 	document.getElementById('root')
 )
 ```
@@ -72,7 +72,7 @@ The `Context` object is then available to use in hooks:
 
 const TodoAdder = () =>
 {
-	const { addTodoItem } = useContext(TodoContext)
+	const { addTodoItem } = useTodo()
 
 	// ...
 }
@@ -91,9 +91,9 @@ type TodoState = {
 }
 
 export [
-	TodoContext,
-	TodoContextProvider
-] = createStatefulContext<TodoState>(Context => ({ children }) =>
+	useTodo,
+	TodoProvider
+] = createStatefulContext<TodoState>(Provider => ({ children }) =>
 {
 	const [todoList, setTodoList] = useState<string[]>([])
 
@@ -108,12 +108,12 @@ export [
 	}
 
 	return (
-		<Context.Provider value={ {
+		<Provider value={ {
 			addTodoItem,
 			popTodoItem
 		} }>
 			{ children }
-		</Context.Provider>
+		</Provider>
 	)
 })
 ```
